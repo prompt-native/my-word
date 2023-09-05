@@ -7,7 +7,7 @@ import TextLoud
 
 Window {
     width: 800
-    height: 100
+    height: 600
 
     visible: true
     title: "MyWord"

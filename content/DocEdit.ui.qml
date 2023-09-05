@@ -53,11 +53,18 @@ ColumnLayout {
         contentHeight: textedit.height
         contentWidth: textedit.width
         clip: true
-        ScrollBar.vertical: ScrollBar {}
+        ScrollBar.vertical: ScrollBar {
+            policy: flickable.contentHeight
+                    > flickable.height ? ScrollBar.AlwaysOn : ScrollBar.AlwaysOff
+        }
         TextEdit {
             id: textedit
             clip: true
             width: flickable.width
+            leftPadding: 40
+            rightPadding: 40
+            topPadding: 40
+            bottomPadding: 20
             Layout.fillHeight: true
             text: "<bold>“My late husband Michael Williams and I used to do a lot of recitals, many of them with Robert Spencer. Halfway through the recital, Robert would recite this poem, and it always reduced me to tears, so much so that I was incapable of continuing the recital if it was my turn next. As a result, we changed the order so that Michael followed this particular piece and I had time to compose myself.” </bold>"
             anchors.top: tabbar.bottom
