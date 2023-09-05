@@ -13,36 +13,92 @@ import QtQuick.Layouts 2.15
 ColumnLayout {
     ToolBar {
         id: tabbar
-        Layout.fillWidth: true
         Layout.preferredHeight: 50
+        Layout.fillWidth: true
+
         background: Rectangle {
             color: "white"
         }
-        Row {
+        RowLayout {
             id: row
-            spacing: 10
+            spacing: 5
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.bottom: parent.top
+            anchors.bottomMargin: -50
+            anchors.topMargin: 0
+            anchors.rightMargin: 40
+            anchors.leftMargin: 40
+
             Image {
-                width: 12
-                height: 12
-                anchors.verticalCenter: parent.verticalCenter
-                source: "images/svgs/solid/bold.svg"
-                MouseArea {
-                    anchors.fill: parent
-                }
+                source: "images/lc_open.svg"
             }
             Image {
-                width: 12
-                height: 12
-                anchors.verticalCenter: parent.verticalCenter
-                source: "images/svgs/solid/italic.svg"
+                source: "images/lc_save.svg"
             }
             Image {
-                width: 12
-                height: 12
-                anchors.verticalCenter: parent.verticalCenter
-                source: "images/svgs/solid/underline.svg"
+                source: "images/lc_print.svg"
             }
-            ToolSeparator {}
+            ToolSeparator {
+                Layout.preferredHeight: 40
+            }
+            Image {
+                source: "images/lc_bold.svg"
+            }
+            Image {
+                source: "images/lc_italic.svg"
+            }
+            Image {
+                source: "images/lc_underline.svg"
+            }
+            Image {
+                source: "images/lc_underlinedouble.svg"
+            }
+            Image {
+                source: "images/lc_color.svg"
+            }
+            ToolSeparator {
+                Layout.preferredHeight: 40
+            }
+            ComboBox {
+                width: 200
+                model: ["Arial", "SF Pro"]
+                Layout.preferredHeight: 40
+            }
+            ComboBox {
+                width: 80
+                model: ["14", "16"]
+                Layout.preferredHeight: 40
+            }
+            ToolSeparator {
+                Layout.preferredHeight: 40
+            }
+
+            Image {
+                source: "images/lc_alignleft.svg"
+            }
+            Image {
+                source: "images/lc_alignhorizontalcenter.svg"
+            }
+            Image {
+                source: "images/lc_alignright.svg"
+            }
+            ToolSeparator {
+                Layout.preferredHeight: 40
+            }
+            Image {
+                source: "images/lc_copy.svg"
+            }
+            Image {
+                source: "images/lc_paste.svg"
+            }
+            Image {
+                source: "images/lc_undo.svg"
+            }
+            Image {
+                source: "images/lc_redo.svg"
+            }
         }
     }
 
@@ -72,6 +128,9 @@ ColumnLayout {
             wrapMode: TextEdit.WrapAtWordBoundaryOrAnywhere
             anchors.topMargin: 0
             textFormat: Text.RichText
+            selectByMouse: true
+            font.family: "SF Pro"
+            font.pointSize: 16
         }
     }
 }
