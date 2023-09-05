@@ -7,15 +7,15 @@ import TextLoud
 
 Window {
     width: 800
-    height: 600
+    height: 100
 
     visible: true
     title: "MyWord"
 
-    WordEditor {
+
+    DocEdit {
         id: mainScreen
         anchors.fill: parent
-        anchors.topMargin: 0
     }
 
 }
