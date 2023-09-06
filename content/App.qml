@@ -11,7 +11,7 @@ Window {
     visible: true
     title: "MyWord"
 
-    DocEdit {
+    Editor {
         id: mainScreen
         anchors.fill: parent
     }
