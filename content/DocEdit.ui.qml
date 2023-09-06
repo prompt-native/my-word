@@ -21,15 +21,11 @@ ColumnLayout {
         }
         RowLayout {
             id: row
-            spacing: 5
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.bottom: parent.top
-            anchors.bottomMargin: -50
-            anchors.topMargin: 0
             anchors.rightMargin: 40
             anchors.leftMargin: 40
+            spacing: 5
 
             Image {
                 source: "images/lc_open.svg"
@@ -39,6 +35,21 @@ ColumnLayout {
             }
             Image {
                 source: "images/lc_print.svg"
+            }
+            ToolSeparator {
+                Layout.preferredHeight: 40
+            }
+            Image {
+                source: "images/lc_copy.svg"
+            }
+            Image {
+                source: "images/lc_paste.svg"
+            }
+            Image {
+                source: "images/lc_undo.svg"
+            }
+            Image {
+                source: "images/lc_redo.svg"
             }
             ToolSeparator {
                 Layout.preferredHeight: 40
@@ -61,19 +72,6 @@ ColumnLayout {
             ToolSeparator {
                 Layout.preferredHeight: 40
             }
-            ComboBox {
-                width: 200
-                model: ["Arial", "SF Pro"]
-                Layout.preferredHeight: 40
-            }
-            ComboBox {
-                width: 80
-                model: ["14", "16"]
-                Layout.preferredHeight: 40
-            }
-            ToolSeparator {
-                Layout.preferredHeight: 40
-            }
 
             Image {
                 source: "images/lc_alignleft.svg"
@@ -87,17 +85,15 @@ ColumnLayout {
             ToolSeparator {
                 Layout.preferredHeight: 40
             }
-            Image {
-                source: "images/lc_copy.svg"
+            ComboBox {
+                Layout.fillWidth: true
+                model: ["Arial", "SF Pro"]
+                Layout.preferredHeight: 40
             }
-            Image {
-                source: "images/lc_paste.svg"
-            }
-            Image {
-                source: "images/lc_undo.svg"
-            }
-            Image {
-                source: "images/lc_redo.svg"
+            ComboBox {
+                width: 80
+                model: ["14", "16"]
+                Layout.preferredHeight: 40
             }
         }
     }

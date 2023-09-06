@@ -6,8 +6,8 @@ import QtQuick.Controls 6.2
 import TextLoud
 
 Window {
-    width: 800
-    height: 600
+    width: 1024
+    height: 768
 
     visible: true
     title: "MyWord"
