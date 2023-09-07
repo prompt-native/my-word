@@ -15,5 +15,10 @@ Window {
         id: mainScreen
         anchors.fill: parent
     }
+
+    VoiceControl {
+        id: floatingWidget
+        visible: false
+    }
 }
 

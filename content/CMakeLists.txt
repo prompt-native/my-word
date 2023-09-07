@@ -8,6 +8,7 @@ qt6_add_qml_module(content
     QML_FILES
         App.qml
         Editor.qml
+        VoiceControl.qml
     RESOURCES
         fonts/fonts.txt
         images/lc_alignright.svg
@@ -25,4 +26,5 @@ qt6_add_qml_module(content
         images/lc_print.svg
         images/lc_save.svg
         images/lc_open.svg
+        images/foobar.svg
 )

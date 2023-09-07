@@ -29,19 +29,19 @@ ColumnLayout {
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_open.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_save.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_print.svg")
             }
             ToolSeparator {
@@ -50,25 +50,25 @@ ColumnLayout {
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_copy.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_paste.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_undo.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_redo.svg")
             }
             ToolSeparator {
@@ -77,31 +77,31 @@ ColumnLayout {
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_bold.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_italic.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_underline.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_underlinedouble.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_color.svg")
             }
             ToolSeparator {
@@ -110,19 +110,19 @@ ColumnLayout {
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_alignleft.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_alignhorizontalcenter.svg")
             }
             ToolButton {
                 Layout.preferredWidth: 28
                 Layout.preferredHeight: 28
-                icon.color: "black"
+                icon.color: "transparent"
                 icon.source: Qt.resolvedUrl("images/lc_alignright.svg")
             }
             ToolSeparator {
@@ -140,9 +140,24 @@ ColumnLayout {
                 Layout.preferredHeight: 35
                 font.pointSize: 12
             }
+            ToolSeparator {
+                Layout.preferredHeight: 30
+            }
+            Rectangle {
+                Layout.fillWidth: true
+            }
+
+            ToolButton {
+                Layout.preferredWidth: 36
+                Layout.preferredHeight: 36
+                icon.color: "transparent"
+                icon.source: Qt.resolvedUrl("images/foobar.svg")
+                onClicked: {
+                        floatingWidget.visible = true;
+                    }
+            }
         }
     }
-
     Flickable {
         id: flickable
         Layout.fillWidth: true
